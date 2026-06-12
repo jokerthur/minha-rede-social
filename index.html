@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Rede Social</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>SocialHub</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-page="feed">
+                    <span class="icon">🏠</span>
+                    <span>Feed</span>
+                </a>
+                <a href="#" class="nav-item" data-page="explore">
+                    <span class="icon">🔍</span>
+                    <span>Explorar</span>
+                </a>
+                <a href="#" class="nav-item" data-page="messages">
+                    <span class="icon">💬</span>
+                    <span>Mensagens</span>
+                </a>
+                <a href="#" class="nav-item" data-page="notifications">
+                    <span class="icon">🔔</span>
+                    <span>Notificações</span>
+                </a>
+                <a href="#" class="nav-item" data-page="profile">
+                    <span class="icon">👤</span>
+                    <span>Perfil</span>
+                </a>
+            </nav>
+            <button class="btn-post">Postar</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Feed Section -->
+            <section id="feed" class="page active">
+                <!-- Create Post -->
+                <div class="create-post">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/48" alt="Seu Avatar">
+                    </div>
+                    <div class="post-input-area">
+                        <input type="text" id="post-input" placeholder="No que você está pensando?">
+                        <div class="post-actions">
+                            <button class="action-btn">📷 Foto</button>
+                            <button class="action-btn">😊 Emoji</button>
+                            <button class="action-btn" id="btn-submit-post">Postar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Posts Feed -->
+                <div id="posts-container" class="posts-container">
+                    <!-- Posts will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Explore Section -->
+            <section id="explore" class="page">
+                <h2>Explorar</h2>
+                <div class="explore-grid">
+                    <div class="explore-card">
+                        <h3>Tendências</h3>
+                        <p>Veja o que está em alta</p>
+                    </div>
+                    <div class="explore-card">
+                        <h3>Recomendações</h3>
+                        <p>Pessoas que você pode seguir</p>
+                    </div>
+                    <div class="explore-card">
+                        <h3>Comunidades</h3>
+                        <p>Junte-se a grupos de interesse</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messages" class="page">
+                <h2>Mensagens</h2>
+                <div class="messages-list">
+                    <div class="message-item">
+                        <img src="https://via.placeholder.com/48" alt="Avatar">
+                        <div class="message-info">
+                            <h4>João Silva</h4>
+                            <p>Última mensagem...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section id="notifications" class="page">
+                <h2>Notificações</h2>
+                <div class="notifications-list">
+                    <div class="notification-item">
+                        <span class="icon">❤️</span>
+                        <p><strong>Maria</strong> curtiu seu post</p>
+                        <span class="time">há 2 horas</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile" class="page">
+                <div class="profile-header">
+                    <div class="cover-photo">
+                        <img src="https://via.placeholder.com/800x200" alt="Capa do Perfil">
+                    </div>
+                    <div class="profile-info">
+                        <img src="https://via.placeholder.com/120" alt="Avatar" class="profile-avatar">
+                        <div class="profile-details">
+                            <h2>Seu Nome</h2>
+                            <p class="username">@seu_usuario</p>
+                            <p class="bio">Bio do seu perfil</p>
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-number">150</span>
+                                    <span class="stat-label">Seguidores</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">75</span>
+                                    <span class="stat-label">Seguindo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-posts">
+                    <h3>Seus Posts</h3>
+                    <div id="profile-posts-container" class="posts-container">
+                        <!-- User posts will be displayed here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar (Trending) -->
+        <aside class="trending-sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="🔍 Buscar">
+            </div>
+            <div class="trending-section">
+                <h3>Tendências para você</h3>
+                <div class="trending-item">
+                    <p class="trend-category">Tecnologia • Tendência</p>
+                    <h4>#JavaScript</h4>
+                    <p class="trend-count">125K posts</p>
+                </div>
+                <div class="trending-item">
+                    <p class="trend-category">Programação • Tendência</p>
+                    <h4>#WebDevelopment</h4>
+                    <p class="trend-count">89K posts</p>
+                </div>
+                <div class="trending-item">
+                    <p class="trend-category">Social • Tendência</p>
+                    <h4>#ComunidadeBrasil</h4>
+                    <p class="trend-count">234K posts</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
